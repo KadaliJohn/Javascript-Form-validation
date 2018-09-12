@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            
+        </title>
+        <style>
+        .error{
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Validation</h1>
+        <form id="f1">
+            Username:<input type="text" id="txt1">
+            <span id="spanusername" class="error"></span><br>
+            Password:<input type="password" id="txt2">
+            <span id="spanpassword" class="error"></span><br>
+            <input type="submit" id="button" value="Login">
+        </form>
+<script>
+    document.getElementById("f1").addEventListener("submit",fun1);
+    function fun1(event){
+        var s1=document.getElementById("txt1").value;
+        if(s1==""){
+            event.preventDefault();
+            document.getElementById("spanusername").innerHTML="Username can't blank";
+        }
+        else{
+            document.getElementById("spanusername").innerHTML="";
+        }
+        var s2=document.getElementById("txt2").value;
+        if(s2==""){
+            event.preventDefault();
+            document.getElementById("spanpassword").innerHTML="Password can't be blank";
+        }
+        else{
+            document.getElementById("spanpassword").innerHTML="";
+        }
+    }
+</script>
+
+
+    </body>
+</html>

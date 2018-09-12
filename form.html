@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form>
+            Username:<input type="text" id="txt1"><br>
+            Password:<input type="password" id="txt2"><br>
+            <input type="submit" id="button1" value="Login"><br>
+            <span id="span1"></span>
+
+        </form>
+        <script>
+        document.getElementById("button1").addEventListener("click",fun1);
+        function fun1(event){
+            event.preventDefault();
+            var username=document.getElementById("txt1").value;
+            var password=document.getElementById("txt2").value;
+            if(username=="admin" && password=="admin123")
+            {
+                document.getElementById("span1").innerHTML="SuccessFully Login";
+            }
+            else{
+                document.getElementById("span1").innerHTML="Invalid Login";
+            }
+        }
+        </script>
+    </body>
+</html>
